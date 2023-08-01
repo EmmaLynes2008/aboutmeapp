@@ -12,6 +12,9 @@ struct ContentView: View {
     
     @State private var isClicked = false
     var body: some View {
+        ZStack{
+            Color(hue:0.6, saturation: 0.4, brightness: 0.995)
+                .ignoresSafeArea()
         VStack {
             Image("Cow")
                 .resizable(resizingMode: .stretch)
@@ -28,13 +31,15 @@ struct ContentView: View {
            Button("click to find more about emma :)") {
                 isClicked = true
     
-            }
+           }
+           .tint(.black)
             
             if isClicked == true{
                 
-                Text("i love to play sport, i play lacrosee, netball, snowboarding. i want to travel around the world and visit new places and try new experiences!!!")
+                Text("i love to hang out with friends and i like going to school. im a scorpio. i play netball, lacrosse and cricket. i also love exploring new places and want to travel to different places around the world!! ")
                 
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            }
 
             }
         }
